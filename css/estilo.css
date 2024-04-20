@@ -12,7 +12,7 @@
     --title-color: #F0f0f0;
     --text-color: #9a9a9c;
     --link-color: #9a9a9c;
-    --icon-color: #c7c8c9;
+    --icon-color: #cf5813;
 
 }
 
@@ -26,7 +26,7 @@
     --title-color: #0b0b0f;
     --text-color: #28292e;
     --link-color: #28292e;
-    --icon-color: #56575a;
+    --icon-color: #8d8f8b;
 }
 /*
 definindo variáveis de cores para um tema claro e um tema escuro
@@ -81,5 +81,56 @@ body {
     height: 3.25rem;
 
 }
+#toggletheme {
+    font-size: 1.srem;
+    color: var(--icon-color);
+    cursor: pointer;
+    transition: ease-in-out .4s;
+}
 
+.menu{
+    display: flex;
+    align-items: center;
+    background: var(--primary-bg-color);
+}
+
+.menu-item{
+    width: 100%;
+}
+
+.menu-link{
+    display: flex;
+    align-items: center;
+    gap: .5rem; /* gap serve como espaço*/
+}
+
+.menu-mobile{
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-between;
+    border-top: 1px solid var(--primary-border-color);
+
+}
+
+.menu-mobile .menu-link {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+}
+
+.menu-link.active .menu-icon,
+.menu-link.active .menu-text,
+.menu-link:hover  .menu-icon,
+.menu-link:hover  .menu-text {
+    color: var(--primary-color);
+}
+
+.menu-icon, .menu-text {
+    color: var(--text-color);
+}
+
+.menu-icon {
+    font-size: 1.5rem;
+}
 
