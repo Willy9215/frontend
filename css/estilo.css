@@ -2,7 +2,7 @@
 
 :root, :root[data-theme='dark'] {
     --primary-color: #F0F0F0;  /* cor de texto */
-    --secondary-color: #d82424; /* 2º cor de texto */
+    
     --primary-bg-color: #111217;  /* cor de fundo  */
     /* bg = background = plano de fundo */
     --secondary-bg-color: #28292E;
@@ -11,8 +11,9 @@
 
     --title-color: #F0f0f0;
     --text-color: #9a9a9c;
+    --text-color-mobile: blue;
     --link-color: #9a9a9c;
-    --icon-color: #cf5813;
+    --icon-color: #c7c8c9;
 
 }
 
@@ -26,7 +27,7 @@
     --title-color: #0b0b0f;
     --text-color: #28292e;
     --link-color: #28292e;
-    --icon-color: #8d8f8b;
+    --icon-color: #56575a;
 }
 /*
 definindo variáveis de cores para um tema claro e um tema escuro
@@ -50,7 +51,17 @@ html [data-theme='light'] .tecnologias-logo {
    margin: 0px;  /* margem */
    padding: 0px;  /* preenchimento // espaçamento */ 
    box-sizing: border-box;
-   vertical-align: baseline;
+    /* 
+    A propriedade box-sizing em CSS é usada para alterar o modelo de caixa de um elemento.
+    O valor border-box é usado para garantir que a largura e a altura de um elemento
+    incluam as bordas e o preenchimento, em vez de apenas o conteúdo.
+    Quando você define box-sizing: border-box;, está dizendo ao navegador
+    para calcular a largura e a altura total de um elemento,
+    incluindo a largura das bordas e o preenchimento, e não apenas o conteúdo.
+    */
+   
+
+   /* vertical-align: baseline; */
    list-style: none;
    scrollbar-width: thin;
    scrollbar-color: var(--secondary-bg-color) transparent;
@@ -61,28 +72,79 @@ body {
     color: var(--text-color);
 }
 
-/* conteudo extra */
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+a:hover {
+    color: var(--primary-color);
+}
+i {
+    color: var(--icon-color);
+}
+
+b {
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 200;
+}
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 0.4rem;
+}
+h3 {
+    font-size: 1.55rem;
+    text-align: left;
+}
+h4 {
+    color: var(--primary-color);
+    font-weight: 400;
+    font-size: 1.15rem;
+    text-align: left;
+}
+h1, h2, h3{
+    font-family: 'League Spartan', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    color: var(--title-color);
+    font-weight: 200;
+}
+
+p, span, li {
+    font-size: 1rem;
+}
+p {
+    text-align: justify;
+}
+
+/***/
 
 #header {
     display: flex;
     flex-flow: row wrap;
+    /* Coloca o conteúdo em linha e permite a quebra de linha. */
     justify-content: space-between;
+    /* Os itens dentro do container flexível serão distribuídos de maneira uniforme ao longo do eixo principal, com espaços iguais entre eles.  */
     align-items: center;
     width: 100%;
     padding: 0.5rem 1rem;
     z-index: 2;
 }
+
+.header-logo .logo {
+    width: 3.25rem;
+    height: 3.25rem;
+}
+
 .header-toggle {
     display: flex;
     justify-content: flex-end;
 }
-.header-logo .logo {
-    width: 3.25rem;
-    height: 3.25rem;
-
-}
-#toggletheme {
-    font-size: 1.srem;
+#toggleTheme {
+    font-size: 1.5rem;
     color: var(--icon-color);
     cursor: pointer;
     transition: ease-in-out .4s;
@@ -90,47 +152,80 @@ body {
 
 .menu{
     display: flex;
+    /*  Torna o elemento um flex container automaticamente
+    transformando todos os seus filhos diretos em flex itens */
     align-items: center;
     background: var(--primary-bg-color);
+    gap: 1rem;
 }
-
 .menu-item{
     width: 100%;
 }
-
 .menu-link{
-    display: flex;
+    display: flex; 
+    /*  Torna o elemento um flex container automaticamente
+    transformando todos os seus filhos diretos em flex itens */
     align-items: center;
-    gap: .5rem; /* gap serve como espaço*/
+    gap: .5rem;  
+    /* usada para definir o espaço entre os elementos
+    criar espaçamento uniforme entre os elementos
+    */
 }
 
-.menu-mobile{
-    width: 100vw;
+.menu-mobile {
+    width: 100vw;  /* V W = viewport width*/
     position: fixed;
     bottom: 0;
     justify-content: space-between;
-    border-top: 1px solid var(--primary-border-color);
-
+    border-top: 1px solid var(--primary-border-color);   
 }
 
 .menu-mobile .menu-link {
     flex-direction: column;
+    /* definir a direção principal dos itens em uma coluna vertical */
     justify-content: center;
     padding: 0.5rem 1rem;
 }
 
 .menu-link.active .menu-icon,
 .menu-link.active .menu-text,
-.menu-link:hover  .menu-icon,
-.menu-link:hover  .menu-text {
+.menu-link:hover .menu-icon,
+.menu-link:hover .menu-text { /* a:hover = pseudo-classe  */
     color: var(--primary-color);
 }
 
-.menu-icon, .menu-text {
+.menu-icon, .menu-text{
     color: var(--text-color);
 }
-
-.menu-icon {
+.menu-icon{
     font-size: 1.5rem;
 }
-
+.menu-text {
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+/* 
+.header-nav {   menu desktop 
+    display: none;    none 
+}
+*/
+.menu-principal {
+    gap: 1rem;
+}
+.menu-social{
+    gap: 1rem;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 0.625rem;
+    width: 100%;
+    background: transparent;
+    border-radius: 3rem;
+    border: none;
+    padding: 0.875rem 1.5rem;
+    transition: ease-in-out .3s;
+    cursor: pointer;
+    color: var(--primary-color);
+}
