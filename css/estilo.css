@@ -520,7 +520,19 @@ footer p {
     #home, .projetos, .sobre {
         padding: 8rem 6rem 4rem 6rem;
     }
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .tecnologias {
+        padding: 6.25rem 6rem 2rem 6rem;
+        margin-top: -6rem;
+    }
     .contato {
         padding: 6rem;
+    }
+    .contato p {
+        width: 80%;
     }
 }
