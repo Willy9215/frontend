@@ -493,8 +493,34 @@ footer p {
     padding: 1rem;
 }
 /*responsividade*/
-@media (min-width: 768px) {
+@media (min-width: 768px) /*resolucao cel/pc*/{
     .header {
-        
+        position: fixed;
+        border-bottom: 1px solid var(--primary-border-color);
+        padding: 1rem 6rem;
+        background: var(--primary-bg-color);
+    }
+    .nave-mobile {
+        display: none;
+    }
+    .header-nav {
+        display: flex;
+    }
+    .header-nav,
+    .header-toggle {
+        min-width: 30%;
+    }
+    h1 {
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 3rem;
+
+    }
+    #home, .projetos, .sobre {
+        padding: 8rem 6rem 4rem 6rem;
+    }
+    .contato {
+        padding: 6rem;
     }
 }
