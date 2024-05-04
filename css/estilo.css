@@ -173,7 +173,7 @@ p {
 
 .menu-mobile {
     width: 100vw;  /* V W = viewport width*/
-    /* position: fixed; */
+    position: fixed; 
     bottom: 0;
     justify-content: space-between;
     border-top: 1px solid var(--primary-border-color);   
@@ -463,5 +463,38 @@ p {
 .accordion-item.active .bi-caret-down-fill {
     transform: rotate(180deg);
 }
-
 /*contato */
+.contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    border-top: 1px solid var(--primary-border-color);
+    border-bottom: 1px solid var(--secondary-border-color);
+}
+.contato p {
+    text-align: center;
+}
+.contato .btn {
+    width: auto; /**/
+}
+.contato .email {
+    text-transform: uppercase;
+}
+/*roda pé*/
+
+footer {
+    margin-bottom: 5rem;
+}
+footer p {
+    font-size: .875rem;
+    text-align: center;
+    padding: 1rem;
+}
+/*responsividade*/
+@media (min-width: 768px) {
+    .header {
+        
+    }
+}
