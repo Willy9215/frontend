@@ -326,7 +326,7 @@ p {
     object-fit: cover;
     object-position: center;
 }
-.card.body {
+.card-body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -341,10 +341,10 @@ p {
 .card-descricao {
     color: var(--text-color);
 }
-.card-lista, . sobre-lista {
+.card-lista, .sobre-lista {
     margin-left: 1.25rem;
 }
-.card-item, ,sobre-item {
+.card-item, .sobre-item {
     list-style: disc;
 }
 .card-button, .card-descricao {
@@ -534,5 +534,21 @@ footer p {
     }
     .contato p {
         width: 80%;
+    }
+    footer {
+        margin: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .projeto-card {
+        flex-direction: row;
+    }
+    .projeto-card.card-reverse {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .card-cover {
+        width: 55%;
     }
 }
