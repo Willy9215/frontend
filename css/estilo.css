@@ -39,7 +39,7 @@ Isso oferece uma maneira flexível de definir valores
 que podem ser reutilizados em todo o seu CSS e facilmente atualizados de um único lugar.
 */
 
-html [data-theme='light'] .brand-logo {
+html [data-theme='light'] .logo {
     filter:invert(1);
 }
 html [data-theme='light'] .tecnologias-logo {
@@ -203,11 +203,11 @@ p {
     font-size: .75rem;
     text-transform: uppercase;
 }
-/* 
-.header-nav {   menu desktop 
-    display: none;    none 
+ 
+.header-nav {    
+    display: none;   
 }
-*/
+
 .menu-principal {
     gap: 1rem;
 }
@@ -500,7 +500,7 @@ footer p {
         padding: 1rem 6rem;
         background: var(--primary-bg-color);
     }
-    .nave-mobile {
+    .nav-mobile {
         display: none;
     }
     .header-nav {
