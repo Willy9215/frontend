@@ -480,7 +480,7 @@ footer {
 footer p {
     font-size: .875rem;
     text-align: center;
-    padding: 1rem;
+    padding: 2.5rem;
 }
 /*responsividade*/
 @media (min-width: 768px) /*resolucao cel/pc*/{
