@@ -60,7 +60,7 @@ html [data-theme='light'] .tecnologias-logo {
     */
    
 
-   /* vertical-align: baseline; */
+   vertical-align: baseline; 
    list-style: none;
    scrollbar-width: thin;
    scrollbar-color: var(--secondary-bg-color) transparent;
@@ -304,17 +304,7 @@ p {
     flex-direction: column;
     gap: 4rem;
 }
-/*
-#home,
-.tecnologias
-.projetos .projeto-container,
-.sobre,
-.contato {
-    display: flex;
-    flex-direction: column;
-    TESTAR DEPOIS
-}
-*/
+
 .projeto-card {
     display: flex;
     flex-direction: column;
@@ -339,7 +329,7 @@ p {
     font-weight: 400;
 }
 .card-descricao {
-    color: var(--text-color);
+    color: var(--title-color);
 }
 .card-lista, .sobre-lista {
     margin-left: 1.25rem;
