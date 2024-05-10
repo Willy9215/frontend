@@ -7,5 +7,5 @@ const menuLinks = document.querySelectorAll(".menu-link");
 function changeTheme () {
     const currentTheme = rootHtml.getAttribute("data-theme");
 
-    
+    currentTheme === "dark" ? rootHtml.setAttribute("data-theme", "light") : rootHtml.setAttribute("data-theme", "dark");
 }
