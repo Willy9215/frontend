@@ -44,7 +44,7 @@ que podem ser reutilizados em todo o seu CSS e facilmente atualizados de um úni
 html [data-theme='light'] .logo {
     filter:invert(1);
 }
-html [data-theme='light'] .tecnologias-logo {
+html [data-theme='light'] .tecnologia-logo {
     filter: invert(80%);
 }
 /*  (*) reset do CSS */
